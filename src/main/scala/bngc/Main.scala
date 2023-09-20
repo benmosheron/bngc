@@ -19,9 +19,12 @@ import scala.util.Try
 object Main extends IOApp {
 
   private final case class ValidatedArgs(
+      levelFileName: String,
       speedClass: SpeedClass,
       difficulty: Difficulty,
-      pointsToUnlockTournament: Int
+      campaignName: String,
+      pointsToUnlockTournament: Int,
+      outDir: String
   )
 
   private def validatePointsToUnlockTournament(
@@ -53,24 +56,24 @@ object Main extends IOApp {
       speedClassArg <- Args.readSpeedClassArg[IO](args)
       difficultyArg <- Args.readDifficultyArg[IO](args)
       campaignNameArg <- Args.readCampaignNameArg[IO](args)
-      pointsToUnlockTournamentArg <- Args.readPointsToUnlockTournamentArg[IO](
-        args
-      )
+      pointsToUnlockTournamentArg <- Args.readPointsToUnlockTournamentArg[IO](args)
+      outDirArg <- Args.readOutFileDirectory[IO](args)
 
       outFileName = s"generated_$levelFileNameArg"
       levelFilePath = s"src/main/resources/levels/$levelFileNameArg.txt"
 
-      a <- validateFileIsReadable[IO](levelFilePath)
-      b = SpeedClass.validate(speedClassArg)
-      c = Difficulty.validate(difficultyArg)
-      d = validatePointsToUnlockTournament(pointsToUnlockTournamentArg)
+      u1 <- validateFileIsReadable[IO](levelFilePath)
+      u2 <- validateDirExists[IO](outDirArg)
+      a = SpeedClass.validate(speedClassArg)
+      b = Difficulty.validate(difficultyArg)
+      c = validatePointsToUnlockTournament(pointsToUnlockTournamentArg)
 
-      argsToAccept =
-        a.product(b).product(c).product(d).map { case ((((), speedClass), difficulty), points) =>
-          ValidatedArgs(speedClass, difficulty, points)
+      combinedVal =
+        u1.combine(u2).product(a).product(b).product(c).map { case ((((), speedClass), difficulty), points) =>
+          ValidatedArgs(levelFileNameArg, speedClass, difficulty, campaignNameArg, points, outDirArg)
         }
 
-      acceptedArgs <- acceptArgs[IO](argsToAccept)
+      acceptedArgs <- acceptArgs[IO](combinedVal)
 
       levelNames <- readLines[IO](levelFilePath)
       mainTemplate <- readTemplate[IO]("template")
@@ -91,7 +94,7 @@ object Main extends IOApp {
         .mkString("\r\n")
 
       xmlStringWithContainer = mainTemplate
-        .withCampaignName(campaignNameArg)
+        .withCampaignName(acceptedArgs.campaignName)
         .withPointsToUnlockTournament(acceptedArgs.pointsToUnlockTournament)
         .withSpeedClass(acceptedArgs.speedClass)
         .withDifficulty(acceptedArgs.difficulty)
@@ -100,11 +103,8 @@ object Main extends IOApp {
 
       finalString = removeContainerAndFormat(xmlStringWithContainer)
 
-      _ <- writeFile[IO](s"out/$outFileName.xml", finalString)
-      _ <- writeFile[IO](
-        s"D:/SteamLibrary/steamapps/common/BallisticNG/User/Mods/Campaigns/$outFileName.xml",
-        finalString
-      )
+      _ <- writeFile[IO](s"${acceptedArgs.outDir}/$outFileName.xml", finalString)
+      _ <- if (acceptedArgs.outDir != "out") writeFile[IO](s"out/$outFileName.xml", finalString) else IO.unit
 
     } yield ExitCode.Success
 

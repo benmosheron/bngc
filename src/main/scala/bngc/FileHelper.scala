@@ -28,13 +28,25 @@ object FileHelper {
       }
   } yield result
 
+  def validateDirExists[F[_]: Monad](
+      dirPath: String
+  ): F[ValidatedNel[Error, Unit]] = for {
+    path <- Applicative[F].pure(Paths.get(dirPath))
+    exists <- Applicative[F].pure(Files.isDirectory(path))
+    result <-
+      if (exists) {
+        Applicative[F].pure(Valid(()))
+      } else {
+        Applicative[F].pure(Invalid(DirectoryDoesNotExist(dirPath)).toValidatedNel)
+      }
+  } yield result
+
   def readLines[F[_]: Monad: Console](filePath: String): F[List[String]] = for {
     path <- Monad[F].pure(Paths.get(filePath))
     lines <- Monad[F].pure(Files.readAllLines(path).asScala.toList)
     _ <- Console[F].println(s"Read [${lines.size}] level names from file")
     _ <- lines.map(line => Console[F].println(s"* $line")).sequence_
   } yield lines
-
 
   def readTemplate[F[_]: Applicative](name: String): F[String] =
     Applicative[F].pure(Files.readString(Paths.get(s"src/main/resources/templates/$name.xml")))

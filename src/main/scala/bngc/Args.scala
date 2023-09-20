@@ -21,6 +21,9 @@ object Args {
   private val pointsToUnlockTournamentParam = "--pointsToUnlockTournament"
   private val pointsToUnlockTournamentDefault = 0
 
+  private val outFileDirectoryParam = "--outFileDirectory"
+  private val outFileDirectoryDefault = "out"
+
   def readLevelFileArg[F[_]: Console: Applicative](
       args: List[String]
   ): F[String] = readArg(args)(levelFileNameParam, levelFileDefault)
@@ -39,10 +42,11 @@ object Args {
 
   def readPointsToUnlockTournamentArg[F[_]: Console: Applicative](
       args: List[String]
-  ): F[String] = readArg(args)(
-    pointsToUnlockTournamentParam,
-    pointsToUnlockTournamentDefault.toString
-  )
+  ): F[String] = readArg(args)(pointsToUnlockTournamentParam, pointsToUnlockTournamentDefault.toString)
+
+  def readOutFileDirectory[F[_]: Console: Applicative](
+      args: List[String]
+  ): F[String] = readArg(args)(outFileDirectoryParam, outFileDirectoryDefault)
 
   private def readArg[F[_]: Console: Applicative](
       args: List[String]

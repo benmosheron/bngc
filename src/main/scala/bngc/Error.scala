@@ -6,4 +6,5 @@ object Error {
   case class InvalidSpeedClass(invalid: String) extends Error
   case class InvalidDifficulty(invalid: String) extends Error
   case class IsNotInteger(invalid: String) extends Error
+  case class DirectoryDoesNotExist(path: String) extends Error
 }
