@@ -1,5 +1,8 @@
 package bngc
 
+import bngc.adt.Difficulty._
+import bngc.adt.SpeedClass._
+
 object Placeholder {
 
   private val SingleRaceEvents = """<SingleRaceEvents />"""

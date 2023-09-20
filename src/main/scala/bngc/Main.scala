@@ -1,102 +1,100 @@
 package bngc
 
-import scala.jdk.CollectionConverters._
-import scala.xml.XML
-import java.nio.charset.StandardCharsets
-import java.nio.file.{Files, Paths}
+import bngc.Error._
+import bngc.FileHelper._
+import bngc.adt.Difficulty.Difficulty
+import bngc.adt.SpeedClass.SpeedClass
+import bngc.adt._
+import bngc.Placeholder.StringUtil
+import bngc.XmlHelper.removeContainerAndFormat
+import cats.data.Validated.{Invalid, Valid}
+import cats.data.{NonEmptyList, ValidatedNel}
+import cats.effect.std.Console
+import cats.effect.{ExitCode, IO, IOApp}
+import cats.syntax.all._
+import cats.{Applicative, ApplicativeError}
 
-object Main {
+object Main extends IOApp {
 
-  private val levelFileArgRegex = """--levelFileName (\S+)""".r.unanchored
+  private final case class ValidatedArgs(
+      speedClass: SpeedClass,
+      difficulty: Difficulty
+  )
 
-  private object DefaultArgs {
-    val LevelFileName = "standard_levels"
+  private def reportErrors[F[_]: Console: Applicative](
+      errors: NonEmptyList[Error]
+  ): F[Unit] =
+    errors.map(Console[F].println).sequence_
+
+  private def acceptArgs[F[_]: Console](
+      v: ValidatedNel[Error, ValidatedArgs]
+  )(implicit ae: ApplicativeError[F, Throwable]): F[ValidatedArgs] = v match {
+    case Invalid(errors) =>
+      reportErrors(errors) *> ae.raiseError[ValidatedArgs](
+        new Exception(errors.toString)
+      )
+    case Valid(a) => ae.pure(a)
   }
 
-  def main(args: Array[String]): Unit = {
-
-    val argsString = args.mkString(" ")
-
-    val nameOfLevelFile = argsString match {
-      case levelFileArgRegex(fileName) => fileName
-      case _ => DefaultArgs.LevelFileName
-    }
-
-    val speedClass = Halberd
-    val difficulty = Expert
-
-    val campaignName = nameOfLevelFile match {
-      case "enai_siaion_levels" => s"Enai Siaion $speedClass Campaign"
-      case "standard_levels" => s"$speedClass Campaign"
-    }
-
-    val outFileName = s"generated_$nameOfLevelFile"
+  override def run(args: List[String]): IO[ExitCode] = {
 
     val pointsToUnlockTournament = 0
 
-    val levelNames = Files
-      .readAllLines(
-        Paths.get(s"src/main/resources/levels/$nameOfLevelFile.txt")
+    for {
+      levelFileNameArg <- Args.readLevelFileArg[IO](args)
+      speedClassArg <- Args.readSpeedClassArg[IO](args)
+      difficultyArg <- Args.readDifficultyArg[IO](args)
+      campaignNameArg <- Args.readCampaignNameArg[IO](args)
+
+      outFileName = s"generated_$levelFileNameArg"
+      levelFilePath = s"src/main/resources/levels/$levelFileNameArg.txt"
+
+      a <- validateFileIsReadable[IO](levelFilePath)
+      b = SpeedClass.validate(speedClassArg)
+      c = Difficulty.validate(difficultyArg)
+
+      speedClassDifficulty = a.product(b).product(c).map {
+        case (((), speedClass), difficulty) =>
+          ValidatedArgs(speedClass, difficulty)
+      }
+
+      acceptedArgs <- acceptArgs[IO](speedClassDifficulty)
+
+      levelNames <- readLines[IO](levelFilePath)
+      mainTemplate <- readTemplate[IO]("template")
+      singleRaceEventTemplate <- readTemplate[IO]("single_race_event_template")
+      tournamentLevelTemplate <- readTemplate[IO]("tournament_level_template")
+
+      singleRaceEvents = levelNames
+        .map(levelName =>
+          singleRaceEventTemplate
+            .withLevelName(levelName)
+            .withSpeedClass(acceptedArgs.speedClass)
+            .withDifficulty(acceptedArgs.difficulty)
+        )
+        .mkString("\r\n")
+
+      tournamentLevels = levelNames
+        .map(levelName => tournamentLevelTemplate.withLevelName(levelName))
+        .mkString("\r\n")
+
+      xmlStringWithContainer = mainTemplate
+        .withCampaignName(campaignNameArg)
+        .withPointsToUnlockTournament(pointsToUnlockTournament)
+        .withSpeedClass(acceptedArgs.speedClass)
+        .withDifficulty(acceptedArgs.difficulty)
+        .withSingleRaceEvents(singleRaceEvents)
+        .withTournamentLevels(tournamentLevels)
+
+      finalString = removeContainerAndFormat(xmlStringWithContainer)
+
+      _ <- writeFile[IO](s"out/$outFileName.xml", finalString)
+      _ <- writeFile[IO](
+        s"D:/SteamLibrary/steamapps/common/BallisticNG/User/Mods/Campaigns/$outFileName.xml",
+        finalString
       )
-      .asScala
-      .toList
 
-
-    def readTemplate(name: String): String =
-      Files.readString(Paths.get(s"src/main/resources/templates/$name.xml"))
-
-    val mainTemplate = readTemplate("template")
-    val singleRaceEventTemplate = readTemplate("single_race_event_template")
-    val tournamentLevelTemplate = readTemplate("tournament_level_template")
-
-    import Placeholder.StringUtil
-
-    val singleRaceEvents = levelNames
-      .map(levelName =>
-        singleRaceEventTemplate
-          .withLevelName(levelName)
-          .withSpeedClass(speedClass)
-          .withDifficulty(difficulty)
-      )
-      .mkString("\r\n")
-
-    val tournamentLevels = levelNames
-      .map(levelName => tournamentLevelTemplate.withLevelName(levelName))
-      .mkString("\r\n")
-
-    val xmlWithContainer = mainTemplate
-      .withCampaignName(campaignName)
-      .withPointsToUnlockTournament(pointsToUnlockTournament)
-      .withSpeedClass(speedClass)
-      .withDifficulty(difficulty)
-      .withSingleRaceEvents(singleRaceEvents)
-      .withTournamentLevels(tournamentLevels)
-
-    val container = XML.loadString(xmlWithContainer)
-
-    val settings = (container \ "Settings").head
-    val singleRaceGroup =
-      (container \ "Group").find(x => x \@ "BngcId" == "SingleRaceGroup").get
-    val tournamentGroup =
-      (container \ "Group").find(x => x \@ "BngcId" == "TournamentGroup").get
-
-    val pp = new scala.xml.PrettyPrinter(1000, 2)
-
-    val finalString = List(
-      settings,
-      singleRaceGroup,
-      tournamentGroup
-    ).map(xml => pp.format(xml))
-      .mkString("\r\n")
-
-    Files.write(
-      Paths.get(s"out/$outFileName.xml"),
-      finalString.getBytes(StandardCharsets.UTF_8)
-    )
-
-    // also write directly to game dir
-    Files.write(Paths.get(s"D:/SteamLibrary/steamapps/common/BallisticNG/User/Mods/Campaigns/$outFileName.xml"), finalString.getBytes(StandardCharsets.UTF_8))
+    } yield ExitCode.Success
 
   }
-
 }
