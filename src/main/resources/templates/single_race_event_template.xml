@@ -1,0 +1,13 @@
+<Event>
+  <Frontend Name="#LevelName" Description=""/>
+  <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+  <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="#SpeedClass"/>
+  <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0"
+             ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip=""
+             ForcedPlayerLivery="0"
+             ForcedPlayerScheme="0"/>
+  <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="#Difficulty"/>
+  <Levels>
+    <Level Name="#LevelName"/>
+  </Levels>
+</Event>

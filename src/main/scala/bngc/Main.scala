@@ -1,78 +1,101 @@
 package bngc
 
 import scala.jdk.CollectionConverters._
+import scala.xml.XML
+import java.nio.charset.StandardCharsets
+import java.nio.file.{Files, Paths}
 
 object Main {
 
+  private val levelFileArgRegex = """--levelFileName (\S+)""".r.unanchored
+
+  private object DefaultArgs {
+    val LevelFileName = "standard_levels"
+  }
+
   def main(args: Array[String]): Unit = {
 
+    val argsString = args.mkString(" ")
+
+    val nameOfLevelFile = argsString match {
+      case levelFileArgRegex(fileName) => fileName
+      case _ => DefaultArgs.LevelFileName
+    }
+
+    val speedClass = Halberd
+    val difficulty = Expert
+
+    val campaignName = nameOfLevelFile match {
+      case "enai_siaion_levels" => s"Enai Siaion $speedClass Campaign"
+      case "standard_levels" => s"$speedClass Campaign"
+    }
+
+    val outFileName = s"generated_$nameOfLevelFile"
+
+    val pointsToUnlockTournament = 0
+
+    val levelNames = Files
+      .readAllLines(
+        Paths.get(s"src/main/resources/levels/$nameOfLevelFile.txt")
+      )
+      .asScala
+      .toList
 
 
-    def openCampaignForRace(name: String) =
-      s"""
-<Settings Name="$name" BarracudaAllowed="False" CustomShipsAllowed="False" Video="" FallbackTexture="" />
-<Group PointsToUnlock="0">
-"""
+    def readTemplate(name: String): String =
+      Files.readString(Paths.get(s"src/main/resources/templates/$name.xml"))
 
-    val closeGroup = "</Group>"
+    val mainTemplate = readTemplate("template")
+    val singleRaceEventTemplate = readTemplate("single_race_event_template")
+    val tournamentLevelTemplate = readTemplate("tournament_level_template")
 
+    import Placeholder.StringUtil
 
-    def race(level: String, speedClass: SpeedClass = Halberd, difficulty: Difficulty = Expert): String =
-      s"""  <Event>
-    <Frontend Name="$level Race" Description="" />
-    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0" />
-    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="$speedClass" />
-    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0" />
-    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="$difficulty" />
-    <Levels>
-      <Level Name="$level" />
-    </Levels>
-  </Event>
-"""
+    val singleRaceEvents = levelNames
+      .map(levelName =>
+        singleRaceEventTemplate
+          .withLevelName(levelName)
+          .withSpeedClass(speedClass)
+          .withDifficulty(difficulty)
+      )
+      .mkString("\r\n")
 
-    def openGroupForTournament(pointsToUnlock: Int, speedClass: SpeedClass = Halberd, difficulty: Difficulty = Expert) =
-      s"""
-<Group PointsToUnlock="$pointsToUnlock">
-  <Event>
-    <Frontend Name="Tournament" Description="" />
-    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0" />
-    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="$speedClass" />
-    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0" />
-    <Ai Count="0" UseSpeedMult="False" SpeedMult="1" Difficulty="$difficulty" />
-    <Levels>"""
+    val tournamentLevels = levelNames
+      .map(levelName => tournamentLevelTemplate.withLevelName(levelName))
+      .mkString("\r\n")
 
+    val xmlWithContainer = mainTemplate
+      .withCampaignName(campaignName)
+      .withPointsToUnlockTournament(pointsToUnlockTournament)
+      .withSpeedClass(speedClass)
+      .withDifficulty(difficulty)
+      .withSingleRaceEvents(singleRaceEvents)
+      .withTournamentLevels(tournamentLevels)
 
-    val closeTournament =
-      """    </Levels>
-  </Event>"""
+    val container = XML.loadString(xmlWithContainer)
 
-    import java.nio.charset.StandardCharsets
-    import java.nio.file.{Files, Paths}
+    val settings = (container \ "Settings").head
+    val singleRaceGroup =
+      (container \ "Group").find(x => x \@ "BngcId" == "SingleRaceGroup").get
+    val tournamentGroup =
+      (container \ "Group").find(x => x \@ "BngcId" == "TournamentGroup").get
 
-    val nameOfLevelFile = "standard_levels"
-//    val nameOfLevelFile = "enai_siaion_levels"
+    val pp = new scala.xml.PrettyPrinter(1000, 2)
 
-    val levels = Files.readAllLines(Paths.get(s"src/main/resources/$nameOfLevelFile.txt")).asScala.toList
+    val finalString = List(
+      settings,
+      singleRaceGroup,
+      tournamentGroup
+    ).map(xml => pp.format(xml))
+      .mkString("\r\n")
 
-    val singleRaceEvents = levels.map(l => race(l)).mkString
-    val tournamentLevels = levels.map(l => s"""      <Level Name="$l" />""").mkString("\r\n")
-
-    val s =
-      s"""
-${openCampaignForRace("Ben Test Campaign")}
-$singleRaceEvents
-$closeGroup
-${openGroupForTournament(96)}
-$tournamentLevels
-$closeTournament
-$closeGroup
-    """
-
-    val fileName = s"$nameOfLevelFile.xml"
-    Files.write(Paths.get(s"out/$fileName"), s.getBytes(StandardCharsets.UTF_8))
+    Files.write(
+      Paths.get(s"out/$outFileName.xml"),
+      finalString.getBytes(StandardCharsets.UTF_8)
+    )
 
     // also write directly to game dir
-    Files.write(Paths.get(s"D:/SteamLibrary/steamapps/common/BallisticNG/User/Mods/Campaigns/$fileName"), s.getBytes(StandardCharsets.UTF_8))
+    Files.write(Paths.get(s"D:/SteamLibrary/steamapps/common/BallisticNG/User/Mods/Campaigns/$outFileName.xml"), finalString.getBytes(StandardCharsets.UTF_8))
 
   }
 
