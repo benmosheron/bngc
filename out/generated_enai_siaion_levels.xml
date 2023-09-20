@@ -931,7 +931,7 @@
     </Levels>
   </Event>
 </Group>
-<Group PointsToUnlock="0" BngcId="TournamentGroup">
+<Group PointsToUnlock="180" BngcId="TournamentGroup">
   <Event>
     <Frontend Name="Tournament" Description=""/>
     <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
