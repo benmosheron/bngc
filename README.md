@@ -1,5 +1,7 @@
 # BallisticNG Campaign Generator
 
+![screenshot showing custom campaign with all standard tracks](images/demo-screenshot.png)
+
 Tool to easily create custom campaigns in BallisticNG from a large number of tracks.
 
 The generated campaign will contain a single race event for every level read from a file, and a big tournament event containing all the races.
@@ -117,3 +119,11 @@ Level text files in `src/main/resources/levels` are simple text files containing
   * Only the track names are reproduced in this repo, no IP is stolen
 
 You can add more files to this folder. They must be `.txt` files, and you will need to point the generator to the new file using `--levelFileName your_file_name_without_extension`.
+
+## Example output
+
+Example XML files are included in the out directory:
+* [out/generated_standard_levels.xml](out/generated_standard_levels.xml)
+  * args used: `--levelFileName standard_levels --speedClass Halberd --difficulty Expert --campaignName "All Tracks - Halberd - Expert" --pointsToUnlockTournament 96`
+* [out/generated_enai_siaion_levels.xml](out/generated_enai_siaion_levels.xml)
+  * args used: `--levelFileName enai_siaion_levels --speedClass Halberd --difficulty Expert --campaignName "Enai Siaion Ultimate!" --pointsToUnlockTournament 180`
