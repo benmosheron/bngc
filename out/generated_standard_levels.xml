@@ -1,0 +1,366 @@
+<Settings Name="All Tracks - Halberd - Expert" BarracudaAllowed="False" CustomShipsAllowed="False" Video="" FallbackTexture=""/>
+<Group PointsToUnlock="0" BngcId="SingleRaceGroup">
+  <Event>
+    <Frontend Name="Cassandra" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Cassandra"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Zephyr Ridge" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Zephyr Ridge"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Surge" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Surge"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Harpstone" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Harpstone"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Aciknovae" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Aciknovae"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Zephyr Climb" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Zephyr Climb"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Nova Split" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Nova Split"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Luna" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Luna"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Dover" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Dover"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Ishtar Citadel" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Ishtar Citadel"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Arrivon XI" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Arrivon XI"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Omega Harbour" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Omega Harbour"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Utah Project" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Utah Project"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Marina Rush" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Marina Rush"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Atlantica" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Atlantica"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Maceno Bay" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Maceno Bay"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Therma Fumos" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Therma Fumos"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Maceno Interchange" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Maceno Interchange"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Freyr Falls" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Freyr Falls"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Alto Overseer" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Alto Overseer"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Maceno Peak" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Maceno Peak"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Vega Square" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Vega Square"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Route 05" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Route 05"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Thunderhead" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Thunderhead"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Basin" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Basin"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Metro" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Metro"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Caldera" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Caldera"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Project 9" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Project 9"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Haze" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Haze"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Helios Descent" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Helios Descent"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Port Ares" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Port Ares"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Kuiper Overturn" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Kuiper Overturn"/>
+    </Levels>
+  </Event>
+</Group>
+<Group PointsToUnlock="96" BngcId="TournamentGroup">
+  <Event>
+    <Frontend Name="Tournament" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Cassandra"/>
+      <Level Name="Zephyr Ridge"/>
+      <Level Name="Surge"/>
+      <Level Name="Harpstone"/>
+      <Level Name="Aciknovae"/>
+      <Level Name="Zephyr Climb"/>
+      <Level Name="Nova Split"/>
+      <Level Name="Luna"/>
+      <Level Name="Dover"/>
+      <Level Name="Ishtar Citadel"/>
+      <Level Name="Arrivon XI"/>
+      <Level Name="Omega Harbour"/>
+      <Level Name="Utah Project"/>
+      <Level Name="Marina Rush"/>
+      <Level Name="Atlantica"/>
+      <Level Name="Maceno Bay"/>
+      <Level Name="Therma Fumos"/>
+      <Level Name="Maceno Interchange"/>
+      <Level Name="Freyr Falls"/>
+      <Level Name="Alto Overseer"/>
+      <Level Name="Maceno Peak"/>
+      <Level Name="Vega Square"/>
+      <Level Name="Route 05"/>
+      <Level Name="Thunderhead"/>
+      <Level Name="Basin"/>
+      <Level Name="Metro"/>
+      <Level Name="Caldera"/>
+      <Level Name="Project 9"/>
+      <Level Name="Haze"/>
+      <Level Name="Helios Descent"/>
+      <Level Name="Port Ares"/>
+      <Level Name="Kuiper Overturn"/>
+    </Levels>
+  </Event>
+</Group>

@@ -16,7 +16,10 @@ object Args {
   private val difficultyDefault = "Expert"
 
   private val campaignNameParam = "--campaignName"
-  private val campaignNameDefault = "Default Campaign Name"
+  private val campaignNameDefault = "Custom Campaign"
+
+  private val pointsToUnlockTournamentParam = "--pointsToUnlockTournament"
+  private val pointsToUnlockTournamentDefault = 0
 
   def readLevelFileArg[F[_]: Console: Applicative](
       args: List[String]
@@ -32,8 +35,14 @@ object Args {
 
   def readCampaignNameArg[F[_]: Console: Applicative](
       args: List[String]
-  ): F[String] =
-    readArg(args)(campaignNameParam, campaignNameDefault)
+  ): F[String] = readArg(args)(campaignNameParam, campaignNameDefault)
+
+  def readPointsToUnlockTournamentArg[F[_]: Console: Applicative](
+      args: List[String]
+  ): F[String] = readArg(args)(
+    pointsToUnlockTournamentParam,
+    pointsToUnlockTournamentDefault.toString
+  )
 
   private def readArg[F[_]: Console: Applicative](
       args: List[String]

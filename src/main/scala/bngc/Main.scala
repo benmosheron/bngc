@@ -14,12 +14,22 @@ import cats.effect.{ExitCode, IO, IOApp}
 import cats.syntax.all._
 import cats.{Applicative, ApplicativeError}
 
+import scala.util.Try
+
 object Main extends IOApp {
 
   private final case class ValidatedArgs(
       speedClass: SpeedClass,
-      difficulty: Difficulty
+      difficulty: Difficulty,
+      pointsToUnlockTournament: Int
   )
+
+  private def validatePointsToUnlockTournament(
+      pointsToUnlockTournamentArg: String
+  ): ValidatedNel[Error, Int] =
+    Try(pointsToUnlockTournamentArg.toInt).toValidated
+      .leftMap(_ => IsNotInteger(pointsToUnlockTournamentArg))
+      .toValidatedNel
 
   private def reportErrors[F[_]: Console: Applicative](
       errors: NonEmptyList[Error]
@@ -38,13 +48,14 @@ object Main extends IOApp {
 
   override def run(args: List[String]): IO[ExitCode] = {
 
-    val pointsToUnlockTournament = 0
-
     for {
       levelFileNameArg <- Args.readLevelFileArg[IO](args)
       speedClassArg <- Args.readSpeedClassArg[IO](args)
       difficultyArg <- Args.readDifficultyArg[IO](args)
       campaignNameArg <- Args.readCampaignNameArg[IO](args)
+      pointsToUnlockTournamentArg <- Args.readPointsToUnlockTournamentArg[IO](
+        args
+      )
 
       outFileName = s"generated_$levelFileNameArg"
       levelFilePath = s"src/main/resources/levels/$levelFileNameArg.txt"
@@ -52,13 +63,14 @@ object Main extends IOApp {
       a <- validateFileIsReadable[IO](levelFilePath)
       b = SpeedClass.validate(speedClassArg)
       c = Difficulty.validate(difficultyArg)
+      d = validatePointsToUnlockTournament(pointsToUnlockTournamentArg)
 
-      speedClassDifficulty = a.product(b).product(c).map {
-        case (((), speedClass), difficulty) =>
-          ValidatedArgs(speedClass, difficulty)
-      }
+      argsToAccept =
+        a.product(b).product(c).product(d).map { case ((((), speedClass), difficulty), points) =>
+          ValidatedArgs(speedClass, difficulty, points)
+        }
 
-      acceptedArgs <- acceptArgs[IO](speedClassDifficulty)
+      acceptedArgs <- acceptArgs[IO](argsToAccept)
 
       levelNames <- readLines[IO](levelFilePath)
       mainTemplate <- readTemplate[IO]("template")
@@ -80,7 +92,7 @@ object Main extends IOApp {
 
       xmlStringWithContainer = mainTemplate
         .withCampaignName(campaignNameArg)
-        .withPointsToUnlockTournament(pointsToUnlockTournament)
+        .withPointsToUnlockTournament(acceptedArgs.pointsToUnlockTournament)
         .withSpeedClass(acceptedArgs.speedClass)
         .withDifficulty(acceptedArgs.difficulty)
         .withSingleRaceEvents(singleRaceEvents)

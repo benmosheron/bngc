@@ -1,0 +1,1037 @@
+<Settings Name="Enai Siaion Ultimate!" BarracudaAllowed="False" CustomShipsAllowed="False" Video="" FallbackTexture=""/>
+<Group PointsToUnlock="0" BngcId="SingleRaceGroup">
+  <Event>
+    <Frontend Name="(POD) Galleria" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="(POD) Galleria"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Abyssus" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Abyssus"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Aeolus II" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Aeolus II"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Altima XIV" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Altima XIV"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Annapurna" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Annapurna"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Antelao" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Antelao"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Apophis" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Apophis"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Aquilon II" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Aquilon II"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Atan-Ra" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Atan-Ra"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Batur Crater" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Batur Crater"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Beltane" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Beltane"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Brigadoon" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Brigadoon"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Cairodrome II" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Cairodrome II"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Cairodrome" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Cairodrome"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Canyonlands" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Canyonlands"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Carcosa" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Carcosa"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Cassini Dome" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Cassini Dome"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Cerridan VI" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Cerridan VI"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Desolata" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Desolata"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Dione IV" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Dione IV"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Druidia" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Druidia"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Eschaton" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Eschaton"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Faradome" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Faradome"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Fractalos-324" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Fractalos-324"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Gare d'Europa (WipEout2097)" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Gare d'Europa (WipEout2097)"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Gehennom" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Gehennom"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Goldbridge" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Goldbridge"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Great Manitou Trail" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Great Manitou Trail"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Helheim" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Helheim"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Kallisti IV" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Kallisti IV"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Kamanneq" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Kamanneq"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Kanlaon Peak" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Kanlaon Peak"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Kena Memorial" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Kena Memorial"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Khayyam Road" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Khayyam Road"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="L-Damar" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="L-Damar"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Libohove" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Libohove"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Lion's Den" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Lion's Den"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Lumenar V" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Lumenar V"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="M-Aero" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="M-Aero"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Manor Top (Wip3out)" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Manor Top (Wip3out)"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Mega Mall (Wip3out)" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Mega Mall (Wip3out)"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Merkur Alpha" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Merkur Alpha"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Millennium Wharf" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Millennium Wharf"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Monakon-X" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Monakon-X"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Mount Ouragan" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Mount Ouragan"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Nakbe" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Nakbe"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Nemesis" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Nemesis"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Neo Praha" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Neo Praha"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Nitia Descent" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Nitia Descent"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Nocturne" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Nocturne"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Oblivion" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Oblivion"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Oceanus" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Oceanus"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Peikkosilta" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Peikkosilta"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Pont des Anges" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Pont des Anges"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Port Zvezh" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Port Zvezh"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Pretoria Stadium" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Pretoria Stadium"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Project Pandora" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Project Pandora"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Raven's Nest" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Raven's Nest"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Rheinland" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Rheinland"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Ruhr-02" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Ruhr-02"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Runavik" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Runavik"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Saint Caomhan's Point" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Saint Caomhan's Point"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Shanghai Financial" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Shanghai Financial"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Shimoda Run" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Shimoda Run"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Shiva's Dance" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Shiva's Dance"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Silverthread" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Silverthread"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Singadome" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Singadome"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Site-18" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Site-18"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="South Ridge" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="South Ridge"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Sovereign" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Sovereign"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Stanza Inter (Wip3out)" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Stanza Inter (Wip3out)"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Staten Towers" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Staten Towers"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Strelka Complex" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Strelka Complex"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Sylvatar" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Sylvatar"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Taktsang" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Taktsang"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Tamoanchan" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Tamoanchan"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Ten Bears Point" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Ten Bears Point"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="The Tir" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="The Tir"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Tiamat's Maw" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Tiamat's Maw"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Tsagaan Park" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Tsagaan Park"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Tupu Inca" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Tupu Inca"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Valkyrie's Flight" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Valkyrie's Flight"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Vestfjorden" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Vestfjorden"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Vostrukha I" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Vostrukha I"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Vulcan's Forge" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Vulcan's Forge"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Waddenzee" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Waddenzee"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Wellhead Raceway" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Wellhead Raceway"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Willpower" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Willpower"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Xar Gate" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Xar Gate"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Yoru City" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Yoru City"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Yukatek" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Yukatek"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="Yun Cheng Central" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="Yun Cheng Central"/>
+    </Levels>
+  </Event>
+  <Event>
+    <Frontend Name="YZ Indah" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="YZ Indah"/>
+    </Levels>
+  </Event>
+</Group>
+<Group PointsToUnlock="0" BngcId="TournamentGroup">
+  <Event>
+    <Frontend Name="Tournament" Description=""/>
+    <Awards BronzeValue="0" SilverValue="0" GoldValue="0" PlatinumValue="0" EasyScore="0" HardScore="0"/>
+    <Mode Gamemode="Race" ModernPhysics="False" FloorHugger="False" SpeedClass="Halberd"/>
+    <Modifiers Hardcore="False" Weapons="True" Mirror="False" Hyperspeed="False" Dragspeed="False" ExtraLaps="0" ForcePlayerShip="False" ForceAiShip="False" ForcedPlayerShip="" ForcedAiShip="" ForcedPlayerLivery="0" ForcedPlayerScheme="0"/>
+    <Ai Count="7" UseSpeedMult="False" SpeedMult="1" Difficulty="Expert"/>
+    <Levels>
+      <Level Name="(POD) Galleria"/>
+      <Level Name="Abyssus"/>
+      <Level Name="Aeolus II"/>
+      <Level Name="Altima XIV"/>
+      <Level Name="Annapurna"/>
+      <Level Name="Antelao"/>
+      <Level Name="Apophis"/>
+      <Level Name="Aquilon II"/>
+      <Level Name="Atan-Ra"/>
+      <Level Name="Batur Crater"/>
+      <Level Name="Beltane"/>
+      <Level Name="Brigadoon"/>
+      <Level Name="Cairodrome II"/>
+      <Level Name="Cairodrome"/>
+      <Level Name="Canyonlands"/>
+      <Level Name="Carcosa"/>
+      <Level Name="Cassini Dome"/>
+      <Level Name="Cerridan VI"/>
+      <Level Name="Desolata"/>
+      <Level Name="Dione IV"/>
+      <Level Name="Druidia"/>
+      <Level Name="Eschaton"/>
+      <Level Name="Faradome"/>
+      <Level Name="Fractalos-324"/>
+      <Level Name="Gare d'Europa (WipEout2097)"/>
+      <Level Name="Gehennom"/>
+      <Level Name="Goldbridge"/>
+      <Level Name="Great Manitou Trail"/>
+      <Level Name="Helheim"/>
+      <Level Name="Kallisti IV"/>
+      <Level Name="Kamanneq"/>
+      <Level Name="Kanlaon Peak"/>
+      <Level Name="Kena Memorial"/>
+      <Level Name="Khayyam Road"/>
+      <Level Name="L-Damar"/>
+      <Level Name="Libohove"/>
+      <Level Name="Lion's Den"/>
+      <Level Name="Lumenar V"/>
+      <Level Name="M-Aero"/>
+      <Level Name="Manor Top (Wip3out)"/>
+      <Level Name="Mega Mall (Wip3out)"/>
+      <Level Name="Merkur Alpha"/>
+      <Level Name="Millennium Wharf"/>
+      <Level Name="Monakon-X"/>
+      <Level Name="Mount Ouragan"/>
+      <Level Name="Nakbe"/>
+      <Level Name="Nemesis"/>
+      <Level Name="Neo Praha"/>
+      <Level Name="Nitia Descent"/>
+      <Level Name="Nocturne"/>
+      <Level Name="Oblivion"/>
+      <Level Name="Oceanus"/>
+      <Level Name="Peikkosilta"/>
+      <Level Name="Pont des Anges"/>
+      <Level Name="Port Zvezh"/>
+      <Level Name="Pretoria Stadium"/>
+      <Level Name="Project Pandora"/>
+      <Level Name="Raven's Nest"/>
+      <Level Name="Rheinland"/>
+      <Level Name="Ruhr-02"/>
+      <Level Name="Runavik"/>
+      <Level Name="Saint Caomhan's Point"/>
+      <Level Name="Shanghai Financial"/>
+      <Level Name="Shimoda Run"/>
+      <Level Name="Shiva's Dance"/>
+      <Level Name="Silverthread"/>
+      <Level Name="Singadome"/>
+      <Level Name="Site-18"/>
+      <Level Name="South Ridge"/>
+      <Level Name="Sovereign"/>
+      <Level Name="Stanza Inter (Wip3out)"/>
+      <Level Name="Staten Towers"/>
+      <Level Name="Strelka Complex"/>
+      <Level Name="Sylvatar"/>
+      <Level Name="Taktsang"/>
+      <Level Name="Tamoanchan"/>
+      <Level Name="Ten Bears Point"/>
+      <Level Name="The Tir"/>
+      <Level Name="Tiamat's Maw"/>
+      <Level Name="Tsagaan Park"/>
+      <Level Name="Tupu Inca"/>
+      <Level Name="Valkyrie's Flight"/>
+      <Level Name="Vestfjorden"/>
+      <Level Name="Vostrukha I"/>
+      <Level Name="Vulcan's Forge"/>
+      <Level Name="Waddenzee"/>
+      <Level Name="Wellhead Raceway"/>
+      <Level Name="Willpower"/>
+      <Level Name="Xar Gate"/>
+      <Level Name="Yoru City"/>
+      <Level Name="Yukatek"/>
+      <Level Name="Yun Cheng Central"/>
+      <Level Name="YZ Indah"/>
+    </Levels>
+  </Event>
+</Group>
