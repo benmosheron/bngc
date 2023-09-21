@@ -60,20 +60,34 @@ Example with most arguments set:
 
 ### --campaignName
 
-Name of the campaign displayed in game.
+Name of the campaign displayed in game. The campaign name **must** be enclosed in double quotes, and can have spaces.
+The speed class and difficulty will be appended to the campaign name, e.g:
+
+"Custom Campaign - Halberd - Expert"
 
 Default: "Custom Campaign"
 
 ### --difficulty
 
 One of:
-* Novice
-* Experienced
-* Expert
-* Elite
-* Hardcore
+* `Novice`
+* `Experienced`
+* `Expert`
+* `Elite`
+* `Hardcore`
 
 Default: Expert
+
+You can provide more than one difficulty, and a separate campaign will be generated for each. E.g. the following params:
+
+```
+--difficulty Novice Novice Expert
+```
+
+This will create three templates, one for each difficulty.
+
+If multiple arguments are provided for another parameter,
+the longest parameter list will define the number of campaigns created.
 
 ### --levelFileName
 
@@ -101,13 +115,42 @@ Default: 0
 ### --speedClass
 
 One of:
-* Toxic
-* Apex
-* Halberd
-* Spectre
-* Zen
+* `Toxic`
+* `Apex`
+* `Halberd`
+* `Spectre`
+* `Zen`
 
 Default: Halberd
+
+You can provide more than one speed class, and a separate campaign will be generated for each. E.g. the following params:
+
+```
+--speedClass Apex Apex Halberd
+```
+
+This will create three templates, one for each speed class.
+
+If multiple arguments are provided for another parameter,
+the longest parameter list will define the number of campaigns created.
+
+### Multiple Arguments Example
+
+If more than one parameter list is supplied, and one is longer than the other, the last element will be duplicated. E.g:
+
+```
+--speedClass Toxic Apex Halberd Spectre --difficulty Novice Expert
+```
+This will create four templates:
+
+| Speed Class | Difficulty |
+|-------------|------------|
+| Toxic       | Novice     |
+| Apex        | Expert     |
+| Halberd     | Expert     |
+| Spectre     | Expert     |
+
+
 
 ## Level Text Files
 

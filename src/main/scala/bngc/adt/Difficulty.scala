@@ -2,7 +2,7 @@ package bngc.adt
 
 import bngc.Error._
 import cats.data.Validated.{Invalid, Valid}
-import cats.data.ValidatedNel
+import cats.data.{NonEmptyList, ValidatedNel}
 
 object Difficulty {
   sealed trait Difficulty
@@ -22,4 +22,7 @@ object Difficulty {
     case "Hardcore"    => Valid(Hardcore)
     case _             => Invalid(InvalidDifficulty(difficultyArg)).toValidatedNel
   }
+
+  def validate(difficultyArgs: NonEmptyList[String]): ValidatedNel[Error, NonEmptyList[Difficulty]] =
+    difficultyArgs.traverse(validate)
 }

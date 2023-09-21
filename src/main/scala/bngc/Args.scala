@@ -1,6 +1,7 @@
 package bngc
 
 import cats.Applicative
+import cats.data.NonEmptyList
 import cats.effect.std.Console
 import cats.syntax.all._
 
@@ -24,17 +25,26 @@ object Args {
   private val outFileDirectoryParam = "--outFileDirectory"
   private val outFileDirectoryDefault = "out"
 
+  private val allParams = Set(
+    levelFileNameParam,
+    speedClassParam,
+    difficultyParam,
+    campaignNameParam,
+    pointsToUnlockTournamentParam,
+    outFileDirectoryParam
+  )
+
   def readLevelFileArg[F[_]: Console: Applicative](
       args: List[String]
   ): F[String] = readArg(args)(levelFileNameParam, levelFileDefault)
 
-  def readSpeedClassArg[F[_]: Console: Applicative](
+  def readSpeedClassArgs[F[_]: Console: Applicative](
       args: List[String]
-  ): F[String] = readArg(args)(speedClassParam, speedClassDefault)
+  ): F[NonEmptyList[String]] = readArgNel(args)(speedClassParam, speedClassDefault)
 
-  def readDifficultyArg[F[_]: Console: Applicative](
+  def readDifficultyArgs[F[_]: Console: Applicative](
       args: List[String]
-  ): F[String] = readArg(args)(difficultyParam, difficultyDefault)
+  ): F[NonEmptyList[String]] = readArgNel(args)(difficultyParam, difficultyDefault)
 
   def readCampaignNameArg[F[_]: Console: Applicative](
       args: List[String]
@@ -62,6 +72,41 @@ object Args {
         Console[F]
           .println(s"Got $param from args [$arg]")
           .as(arg)
+    }
+  }
+
+  private def readArgNel[F[_]: Console: Applicative](
+      args: List[String]
+  )(param: String, default: String): F[NonEmptyList[String]] = {
+
+    val argList = args.indexOf(param) match {
+      case -1 => List()
+      case i =>
+        val rem = args.drop(i + 1)
+        val argsUntilNextParam = rem.indexWhere(s => allParams.contains(s)) match {
+          case -1 => rem
+          case j  => rem.dropRight(rem.length - j)
+        }
+        argsUntilNextParam match {
+          case Nil => List()
+          case l   => l
+        }
+    }
+
+    argList match {
+      case Nil =>
+        Console[F]
+          .println(s"No $param in args, using default [$default]")
+          .as(NonEmptyList.one(default))
+      case one :: Nil =>
+        Console[F]
+          .println(s"Got $param from args [$one]")
+          .as(NonEmptyList.one(one))
+      case l @ head :: tail =>
+        Console[F]
+          .println(s"Got [${l.length}] $param params: [${l.mkString(", ")}]")
+          .as(NonEmptyList(head, tail))
+
     }
   }
 

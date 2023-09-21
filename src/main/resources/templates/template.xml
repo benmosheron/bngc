@@ -1,5 +1,5 @@
 <Container>
-  <Settings Name="#CampaignName" BarracudaAllowed="False" CustomShipsAllowed="False" Video="" FallbackTexture=""/>
+  <Settings Name="#CampaignName" BarracudaAllowed="False" CustomShipsAllowed="True" Video="" FallbackTexture=""/>
 
   <Group PointsToUnlock="0" BngcId="SingleRaceGroup">
     <SingleRaceEvents />

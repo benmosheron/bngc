@@ -2,7 +2,7 @@ package bngc.adt
 
 import bngc.Error._
 import cats.data.Validated.{Invalid, Valid}
-import cats.data.ValidatedNel
+import cats.data.{NonEmptyList, ValidatedNel}
 
 object SpeedClass {
   sealed trait SpeedClass
@@ -12,7 +12,7 @@ object SpeedClass {
   case object Spectre extends SpeedClass
   case object Zen extends SpeedClass
 
-  def validate(
+  private def validate(
       speedClassArg: String
   ): ValidatedNel[Error, SpeedClass] = speedClassArg match {
     case "Toxic"   => Valid(Toxic)
@@ -22,5 +22,8 @@ object SpeedClass {
     case "Zen"     => Valid(Zen)
     case _         => Invalid(InvalidSpeedClass(speedClassArg)).toValidatedNel
   }
+
+  def validate(speedClassArgs: NonEmptyList[String]): ValidatedNel[Error, NonEmptyList[SpeedClass]] =
+    speedClassArgs.traverse(validate)
 
 }
