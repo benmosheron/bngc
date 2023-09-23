@@ -9,5 +9,6 @@ object PlainData {
   final case class CampaignName(s: String)
   final case class Points(i: Int)
   final case class LevelName(s: String)
+  final case class LevelsAndFilePath(names: List[LevelName], path: LevelFilePath)
 
 }

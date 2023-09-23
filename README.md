@@ -65,7 +65,10 @@ The speed class and difficulty will be appended to the campaign name, e.g:
 
 "Custom Campaign - Halberd - Expert"
 
-Default: "Custom Campaign"
+If you set the campaign name to the special string `"$generate"`,
+then a campaign name will be generated from the level file name, speed class, and difficulty.
+
+Default: `"$generate"`
 
 ### --difficulty
 
@@ -78,7 +81,7 @@ Any number of:
 
 Default: Expert
 
-You can provide more than one difficulty, and a separate campaign will be generated for each. E.g. the following params:
+You can provide more than one difficulty, a separate campaign will be generated for each. E.g. the following params:
 
 ```
 --difficulty Novice Novice Expert
@@ -104,6 +107,17 @@ Default: `Normal`
 The name, without extension, of the `.txt` file in `src/main/resources/levels` which will be used to generate the campaign XML file.
 
 Default: standard_levels
+
+You can provide more than one level file name, a separate campaign will be generated for each. E.g. the following params:
+
+```
+--difficulty standard_levels standard_levels_reverse
+```
+
+This will create two templates, one for each set of levels.
+
+If multiple arguments are provided for another parameter,
+the behaviour depends on `--handleMultiple`.
 
 ### --outFileDirectory
 
@@ -133,7 +147,7 @@ Any number of:
 
 Default: Halberd
 
-You can provide more than one speed class, and a separate campaign will be generated for each. E.g. the following params:
+You can provide more than one speed class, a separate campaign will be generated for each. E.g. the following params:
 
 ```
 --speedClass Apex Apex Halberd

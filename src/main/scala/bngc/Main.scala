@@ -26,7 +26,7 @@ object Main extends IOApp {
       campaignName: CampaignName,
       difficultyNel: NonEmptyList[Difficulty],
       handleMultiple: HandleMultiple,
-      levelFilePath: LevelFilePath,
+      levelFilePathNel: NonEmptyList[LevelFilePath],
       outDirPath: OutDirPath,
       pointsToUnlockTournament: Points,
       speedClassNel: NonEmptyList[SpeedClass]
@@ -44,7 +44,6 @@ object Main extends IOApp {
       singleRaceEventTemplate: SingleRaceEventTemplate,
       tournamentLevelTemplate: TournamentLevelTemplate
   ) {
-    lazy val modifiedCampaignName = CampaignName(s"${campaignName.s} - $speedClass - $difficulty")
     lazy val levelFileName = levelFilePath.path.fileName.toString.dropRight(levelFilePath.path.extName.length)
   }
 
@@ -78,33 +77,36 @@ object Main extends IOApp {
 
   private def splitArgs(
       args: ValidatedArgs,
-      levelNames: List[LevelName],
+      levelPathAndNames: NonEmptyList[LevelsAndFilePath],
       mainTemplate: MainTemplate,
       singleRaceEventTemplate: SingleRaceEventTemplate,
       tournamentLevelTemplate: TournamentLevelTemplate
   ): NonEmptyList[SingleFileArgs] = {
 
-    val split: NonEmptyList[(SpeedClass, Difficulty)] = args.handleMultiple match {
+    val split: NonEmptyList[(SpeedClass, Difficulty, LevelsAndFilePath)] = args.handleMultiple match {
       case HandleMultiple.Normal =>
         val longestLength = List(args.speedClassNel.length, args.difficultyNel.length).max
         val speedClassNel = extend(args.speedClassNel, longestLength)
         val difficultyNel = extend(args.difficultyNel, longestLength)
-        speedClassNel.zip(difficultyNel)
-      case HandleMultiple.Explode => for {
-        speedClass <- args.speedClassNel
-        difficulty <- args.difficultyNel
-      } yield (speedClass, difficulty)
+        val levelInfoNel = extend(levelPathAndNames, longestLength)
+        speedClassNel.zip(difficultyNel).zip(levelInfoNel).map { case ((a, b), c) => (a, b, c) }
+      case HandleMultiple.Explode =>
+        for {
+          speedClass <- args.speedClassNel
+          difficulty <- args.difficultyNel
+          levelInfo <- levelPathAndNames
+        } yield (speedClass, difficulty, levelInfo)
     }
 
-    split.map { case (speedClass, difficulty) =>
+    split.map { case (speedClass, difficulty, levelInfo) =>
       SingleFileArgs(
         args.campaignName,
         difficulty,
-        args.levelFilePath,
+        levelInfo.path,
         args.outDirPath,
         args.pointsToUnlockTournament,
         speedClass,
-        levelNames,
+        levelInfo.names,
         mainTemplate,
         singleRaceEventTemplate,
         tournamentLevelTemplate
@@ -113,7 +115,30 @@ object Main extends IOApp {
 
   }
 
+  def generateCampaignName(args: SingleFileArgs): CampaignName = {
+
+    def name(niceName: String): String = s"$niceName - ${args.speedClass} - ${args.difficulty}"
+
+    CampaignName(args.levelFileName match {
+      // Because I chose ugly level file names...
+      case "standard_levels"                        => name("Standard")
+      case "standard_levels_reverse"                => name("Standard Reverse")
+      case "standard_levels_forward_and_reverse"    => name("Standard All")
+      case "enai_siaion_levels"                     => name("Enai Siaion")
+      case "enai_siaion_levels_reverse"             => name("Enai Siaion Reverse")
+      case "enai_siaion_levels_forward_and_reverse" => name("Enai Siaion All")
+      case "bro_bama_levels"                        => name("Bro Bama")
+      case "bro_bama_levels_reverse"                => name("Bro Bama Reverse")
+      case "bro_bama_levels_forward_and_reverse"    => name("Bro Bama All")
+    })
+  }
+
   private def createFile(args: SingleFileArgs): IO[Unit] = {
+    val finalCampaignName = args.campaignName match {
+      case CampaignName("$generate") => generateCampaignName(args)
+      case _                         => CampaignName(s"${args.campaignName.s} - ${args.speedClass} - ${args.difficulty}")
+    }
+
     val singleRaceEvents = args.levelNames
       .map(levelName =>
         args.singleRaceEventTemplate
@@ -129,7 +154,7 @@ object Main extends IOApp {
       .mkString("\r\n")
 
     val xmlStringWithContainer = args.mainTemplate
-      .withCampaignName(args.modifiedCampaignName)
+      .withCampaignName(finalCampaignName)
       .withPointsToUnlockTournament(args.pointsToUnlockTournament)
       .withSpeedClass(args.speedClass)
       .withDifficulty(args.difficulty)
@@ -147,7 +172,7 @@ object Main extends IOApp {
   }
 
   private def getFileName(args: SingleFileArgs): String = {
-    val campaignName = args.campaignName.s
+    val campaignName = args.levelFileName
       .replace(' ', '_')
       .filter(c => c.isLetterOrDigit || c == '_')
       .toLowerCase
@@ -158,6 +183,18 @@ object Main extends IOApp {
     s"${campaignName}_${lfn}_${speed}_${diff}_$p"
   }
 
+  private def validateAllFilesReadable(
+      levelFilePathArgs: NonEmptyList[String]
+  ): IO[ValidatedNel[Error, NonEmptyList[LevelFilePath]]] =
+    levelFilePathArgs.traverse(validateFileIsReadable[IO, LevelFilePath]).map(_.sequence)
+
+  private def readAllLevelFiles(
+      levelFiles: NonEmptyList[LevelFilePath]
+  ): IO[NonEmptyList[LevelsAndFilePath]] = levelFiles
+    .map(_.path)
+    .traverse(readAllLines[IO, LevelName])
+    .map(_.zip(levelFiles).map(LevelsAndFilePath.tupled))
+
   override def run(args: List[String]): IO[ExitCode] = {
 
     for {
@@ -165,25 +202,22 @@ object Main extends IOApp {
       campaignNameArg <- Args.readCampaignNameArg[IO](args)
       difficultyArgs <- Args.readDifficultyArgs[IO](args)
       handleMultipleArg <- Args.readHandleMultipleArg[IO](args)
-      levelFileNameArg <- Args.readLevelFileArg[IO](args)
+      levelFileNameArgs <- Args.readLevelFileArgs[IO](args)
       outDirArg <- Args.readOutFileDirectoryArg[IO](args)
       pointsToUnlockTournamentArg <- Args.readPointsToUnlockTournamentArg[IO](args)
       speedClassArgs <- Args.readSpeedClassArgs[IO](args)
 
-      levelFilePathArg = s"src/main/resources/levels/$levelFileNameArg.txt"
-
       a = Validated.valid[Error, CampaignName](CampaignName(campaignNameArg)).toValidatedNel
       b = Difficulty.validate(difficultyArgs)
       c = HandleMultiple.validate(handleMultipleArg)
-      d <- validateFileIsReadable[IO, LevelFilePath](levelFilePathArg)
+      d <- validateAllFilesReadable(levelFileNameArgs.map(arg => s"src/main/resources/levels/$arg.txt"))
       e <- validateIsDirectory[IO, OutDirPath](outDirArg)
       f = validatePointsToUnlockTournament(pointsToUnlockTournamentArg).map(Points)
       g = SpeedClass.validate(speedClassArgs)
 
       acceptedArgs <- acceptArgs[IO]((a, b, c, d, e, f, g).mapN(ValidatedArgs))
 
-      levelNames <- readAllLines[IO, LevelName](acceptedArgs.levelFilePath.path)
-      _ <- IO.println(s"Read [${levelNames.length}] level names from file")
+      levelNames <- readAllLevelFiles(acceptedArgs.levelFilePathNel)
       mainTemplate <- readTemplate[IO, MainTemplate]("template")
       singleRaceEventTemplate <- readTemplate[IO, SingleRaceEventTemplate]("single_race_event_template")
       tournamentLevelTemplate <- readTemplate[IO, TournamentLevelTemplate]("tournament_level_template")

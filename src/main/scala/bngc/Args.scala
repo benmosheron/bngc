@@ -17,7 +17,7 @@ object Args {
   private val difficultyDefault = "Expert"
 
   private val campaignNameParam = "--campaignName"
-  private val campaignNameDefault = "Custom Campaign"
+  private val campaignNameDefault = "$generate"
 
   private val pointsToUnlockTournamentParam = "--pointsToUnlockTournament"
   private val pointsToUnlockTournamentDefault = 0
@@ -38,9 +38,9 @@ object Args {
     handleMultipleParam
   )
 
-  def readLevelFileArg[F[_]: Console: Applicative](
+  def readLevelFileArgs[F[_]: Console: Applicative](
       args: List[String]
-  ): F[String] = readArg(args)(levelFileNameParam, levelFileDefault)
+  ): F[NonEmptyList[String]] = readArgNel(args)(levelFileNameParam, levelFileDefault)
 
   def readSpeedClassArgs[F[_]: Console: Applicative](
       args: List[String]
