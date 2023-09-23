@@ -1,5 +1,6 @@
 package bngc
 
+import bngc.PlainData._
 import bngc.adt.Difficulty._
 import bngc.adt.SpeedClass._
 
@@ -19,14 +20,14 @@ object Placeholder {
     def withSingleRaceEvents(singleRaceEvents: String): String = s.replace(SingleRaceEvents, singleRaceEvents)
     def withTournamentLevels(tournamentLevels: String): String = s.replace(TournamentLevels, tournamentLevels)
 
-    def withCampaignName(campaignName: String): String =
-      s.replace(CampaignName, campaignName)
-    def withLevelName(levelName: String): String =
-      s.replace(LevelName, levelName)
-    def withPointsToUnlockTournament(pointsToUnlockTournament: Int): String =
+    def withCampaignName(campaignName: CampaignName): String =
+      s.replace(CampaignName, campaignName.s)
+    def withLevelName(levelName: LevelName): String =
+      s.replace(LevelName, levelName.s)
+    def withPointsToUnlockTournament(pointsToUnlockTournament: Points): String =
       s.replace(
         PointsToUnlockTournament,
-        pointsToUnlockTournament.toString
+        pointsToUnlockTournament.i.toString
       )
     def withSpeedClass(speedClass: SpeedClass): String =
       s.replace(SpeedClass, speedClass.toString)

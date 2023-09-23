@@ -112,6 +112,17 @@ Number of points needed from beating the single races before the tournament can 
 
 Default: 0
 
+### --reverse
+
+One of:
+
+* `No` - no reverse tracks
+* `Yes` - only reverse tracks
+* `Both` - generate separate campaigns for forward and reverse tracks
+* `BothSameCampaign` - campaigns contain both forward and reverse tracks
+
+Default: `No`
+
 ### --speedClass
 
 One of:

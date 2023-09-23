@@ -8,6 +8,7 @@ object Error {
   case class FileNotReadable(path: Path) extends Error
   case class InvalidSpeedClass(invalid: String) extends Error
   case class InvalidDifficulty(invalid: String) extends Error
+  case class InvalidReverse(invalid: String) extends Error
   case class IsNotInteger(invalid: String) extends Error
   case class NotADirectory(path: Path) extends Error
 }

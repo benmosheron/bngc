@@ -25,13 +25,17 @@ object Args {
   private val outFileDirectoryParam = "--outFileDirectory"
   private val outFileDirectoryDefault = "out"
 
+  private val reverseParam = "--reverse"
+  private val reverseDefault = "No"
+
   private val allParams = Set(
     levelFileNameParam,
     speedClassParam,
     difficultyParam,
     campaignNameParam,
     pointsToUnlockTournamentParam,
-    outFileDirectoryParam
+    outFileDirectoryParam,
+    reverseParam
   )
 
   def readLevelFileArg[F[_]: Console: Applicative](
@@ -54,9 +58,13 @@ object Args {
       args: List[String]
   ): F[String] = readArg(args)(pointsToUnlockTournamentParam, pointsToUnlockTournamentDefault.toString)
 
-  def readOutFileDirectory[F[_]: Console: Applicative](
+  def readOutFileDirectoryArg[F[_]: Console: Applicative](
       args: List[String]
   ): F[String] = readArg(args)(outFileDirectoryParam, outFileDirectoryDefault)
+
+  def readReverseArg[F[_]: Console: Applicative](
+      args: List[String]
+  ): F[String] = readArg(args)(reverseParam, reverseDefault)
 
   private def readArg[F[_]: Console: Applicative](
       args: List[String]
