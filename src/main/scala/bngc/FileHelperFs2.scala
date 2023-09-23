@@ -1,6 +1,7 @@
 package bngc
 
 import bngc.Error._
+import bngc.typeclasses.Change._
 import cats.data.ValidatedNel
 import cats.effect.Sync
 import cats.effect.std.Console
@@ -11,31 +12,31 @@ import fs2.Stream
 
 object FileHelperFs2 {
 
-  def validateFileIsReadable[F[_]: Files: Sync: ApplicativeThrow](
+  def validateFileIsReadable[F[_]: Files: Sync: ApplicativeThrow, A: ChangeFromPath](
       s: String
-  ): F[ValidatedNel[Error, Path]] = for {
+  ): F[ValidatedNel[Error, A]] = for {
     path <- path(s)
     readable <- path.flatTraverse(fileIsReadable[F])
-  } yield readable.toValidatedNel
+  } yield readable.toValidatedNel.map(ChangeFromPath[A].change)
 
-  def validateIsDirectory[F[_]: Files: Sync: ApplicativeThrow](
+  def validateIsDirectory[F[_]: Files: Sync: ApplicativeThrow, A: ChangeFromPath](
       s: String
-  ): F[ValidatedNel[Error, Path]] = for {
+  ): F[ValidatedNel[Error, A]] = for {
     path <- path(s)
     readable <- path.flatTraverse(isDirectory[F])
-  } yield readable.toValidatedNel
+  } yield readable.toValidatedNel.map(ChangeFromPath[A].change)
 
-  def readAllLines[F[_]: Files: Sync](path: Path): F[List[String]] = {
-    Files[F].readUtf8Lines(path).compile.toList
+  def readAllLines[F[_]: Files: Sync, A: ChangeFromString](path: Path): F[List[A]] = {
+    Files[F].readUtf8Lines(path).map(ChangeFromString[A].change).compile.toList
   }
 
-  def readTemplate[F[_]: Files: Sync](name: String): F[String] = for {
+  def readTemplate[F[_]: Files: Sync, A: ChangeFromString](name: String): F[A] = for {
     path <- path(s"src/main/resources/templates/$name.xml").map {
       case Left(e)  => throw new Exception(s"Internal error: template XML not found for template name [$name]. $e")
       case Right(p) => p
     }
     lines <- Files[F].readUtf8Lines(path).compile.toList
-  } yield lines.mkString("\r\n")
+  } yield ChangeFromString[A].change(lines.mkString("\r\n"))
 
   def writeFile[F[_]: Sync: Console: Files](outDirPath: Path, outFileName: String, content: String): F[Unit] = {
     val path = outDirPath / Path(s"$outFileName.xml")

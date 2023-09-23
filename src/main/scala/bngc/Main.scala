@@ -9,6 +9,7 @@ import bngc.adt.Reverse.Reverse
 import bngc.adt.SpeedClass.SpeedClass
 import bngc.adt._
 import bngc.template.{MainTemplate, SingleRaceEventTemplate, TournamentLevelTemplate}
+import bngc.typeclasses.Instances._
 import cats.data.Validated.{Invalid, Valid}
 import cats.data.{NonEmptyList, Validated, ValidatedNel}
 import cats.effect.std.Console
@@ -168,19 +169,19 @@ object Main extends IOApp {
 
       a = Validated.valid[Error, CampaignName](CampaignName(campaignNameArg)).toValidatedNel
       b = Difficulty.validate(difficultyArgs)
-      c <- validateFileIsReadable[IO](levelFilePathArg).map(_.map(LevelFilePath))
-      d <- validateIsDirectory[IO](outDirArg).map(_.map(OutDirPath))
+      c <- validateFileIsReadable[IO, LevelFilePath](levelFilePathArg)
+      d <- validateIsDirectory[IO, OutDirPath](outDirArg)
       e = validatePointsToUnlockTournament(pointsToUnlockTournamentArg).map(Points)
       f = Reverse.validate(reverseArg)
       g = SpeedClass.validate(speedClassArgs)
 
       acceptedArgs <- acceptArgs[IO]((a, b, c, d, e, f, g).mapN(ValidatedArgs))
 
-      levelNames <- readAllLines[IO](acceptedArgs.levelFilePath.path).map(_.map(LevelName))
+      levelNames <- readAllLines[IO, LevelName](acceptedArgs.levelFilePath.path)
       _ <- IO.println(s"Read [${levelNames.length}] level names from file")
-      mainTemplate <- readTemplate[IO]("template").map(MainTemplate)
-      singleRaceEventTemplate <- readTemplate[IO]("single_race_event_template").map(SingleRaceEventTemplate)
-      tournamentLevelTemplate <- readTemplate[IO]("tournament_level_template").map(TournamentLevelTemplate)
+      mainTemplate <- readTemplate[IO, MainTemplate]("template")
+      singleRaceEventTemplate <- readTemplate[IO, SingleRaceEventTemplate]("single_race_event_template")
+      tournamentLevelTemplate <- readTemplate[IO, TournamentLevelTemplate]("tournament_level_template")
 
       _ <- splitArgs(acceptedArgs, levelNames, mainTemplate, singleRaceEventTemplate, tournamentLevelTemplate)
         .map(createFile)
