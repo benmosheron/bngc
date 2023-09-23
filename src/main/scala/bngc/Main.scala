@@ -5,7 +5,6 @@ import bngc.FileHelperFs2._
 import bngc.PlainData._
 import bngc.XmlHelper.removeContainerAndFormat
 import bngc.adt.Difficulty.Difficulty
-import bngc.adt.Reverse.Reverse
 import bngc.adt.SpeedClass.SpeedClass
 import bngc.adt._
 import bngc.template.{MainTemplate, SingleRaceEventTemplate, TournamentLevelTemplate}
@@ -28,7 +27,6 @@ object Main extends IOApp {
       levelFilePath: LevelFilePath,
       outDirPath: OutDirPath,
       pointsToUnlockTournament: Points,
-      reverse: Reverse,
       speedClassNel: NonEmptyList[SpeedClass]
   )
 
@@ -38,7 +36,6 @@ object Main extends IOApp {
       levelFilePath: LevelFilePath,
       outDirPath: OutDirPath,
       pointsToUnlockTournament: Points,
-      reverse: Reverse,
       speedClass: SpeedClass,
       levelNames: List[LevelName],
       mainTemplate: MainTemplate,
@@ -97,7 +94,6 @@ object Main extends IOApp {
         args.levelFilePath,
         args.outDirPath,
         args.pointsToUnlockTournament,
-        args.reverse,
         speedClass,
         levelNames,
         mainTemplate,
@@ -162,7 +158,6 @@ object Main extends IOApp {
       levelFileNameArg <- Args.readLevelFileArg[IO](args)
       outDirArg <- Args.readOutFileDirectoryArg[IO](args)
       pointsToUnlockTournamentArg <- Args.readPointsToUnlockTournamentArg[IO](args)
-      reverseArg <- Args.readReverseArg[IO](args)
       speedClassArgs <- Args.readSpeedClassArgs[IO](args)
 
       levelFilePathArg = s"src/main/resources/levels/$levelFileNameArg.txt"
@@ -172,10 +167,9 @@ object Main extends IOApp {
       c <- validateFileIsReadable[IO, LevelFilePath](levelFilePathArg)
       d <- validateIsDirectory[IO, OutDirPath](outDirArg)
       e = validatePointsToUnlockTournament(pointsToUnlockTournamentArg).map(Points)
-      f = Reverse.validate(reverseArg)
-      g = SpeedClass.validate(speedClassArgs)
+      f = SpeedClass.validate(speedClassArgs)
 
-      acceptedArgs <- acceptArgs[IO]((a, b, c, d, e, f, g).mapN(ValidatedArgs))
+      acceptedArgs <- acceptArgs[IO]((a, b, c, d, e, f).mapN(ValidatedArgs))
 
       levelNames <- readAllLines[IO, LevelName](acceptedArgs.levelFilePath.path)
       _ <- IO.println(s"Read [${levelNames.length}] level names from file")
