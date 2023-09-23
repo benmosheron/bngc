@@ -9,21 +9,19 @@ import cats.{ApplicativeThrow, Monad}
 import fs2.io.file.{Files, Path}
 import fs2.Stream
 
-import java.nio.file.InvalidPathException
-
 object FileHelperFs2 {
 
   def validateFileIsReadable[F[_]: Files: Sync: ApplicativeThrow](
       s: String
   ): F[ValidatedNel[Error, Path]] = for {
-    path <- validatePath(s)
+    path <- path(s)
     readable <- path.flatTraverse(fileIsReadable[F])
   } yield readable.toValidatedNel
 
   def validateIsDirectory[F[_]: Files: Sync: ApplicativeThrow](
       s: String
   ): F[ValidatedNel[Error, Path]] = for {
-    path <- validatePath(s)
+    path <- path(s)
     readable <- path.flatTraverse(isDirectory[F])
   } yield readable.toValidatedNel
 
@@ -32,7 +30,10 @@ object FileHelperFs2 {
   }
 
   def readTemplate[F[_]: Files: Sync](name: String): F[String] = for {
-    path <- path(s"src/main/resources/templates/$name.xml")
+    path <- path(s"src/main/resources/templates/$name.xml").map {
+      case Left(e)  => throw new Exception(s"Internal error: template XML not found for template name [$name]. $e")
+      case Right(p) => p
+    }
     lines <- Files[F].readUtf8Lines(path).compile.toList
   } yield lines.mkString("\r\n")
 
@@ -44,15 +45,10 @@ object FileHelperFs2 {
     } yield ()
   }
 
-  private def path[F[_]: Files: Sync](s: String): F[Path] = Sync[F]
-    .catchOnly[InvalidPathException](java.nio.file.Paths.get(s))
-    .map(Path.fromNioPath)
-
-  private def validatePath[F[_]: Files: Sync: ApplicativeThrow](s: String): F[Either[Error, Path]] = {
-    path(s)
-      .map(Either.right[Error, Path])
-      .recover { case _: InvalidPathException => Either.left(PathInvalid(s)) }
-  }
+  private def path[F[_]: Files: Sync](s: String): F[Either[Error, Path]] = Sync[F]
+    .catchOnly[java.nio.file.InvalidPathException](Path(s))
+    .map(Either.right[Error, Path])
+    .recover { case _: java.nio.file.InvalidPathException => Either.left[Error, Path](PathInvalid(s)) }
 
   private def fileIsReadable[F[_]: Files: Monad](
       path: Path
