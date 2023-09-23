@@ -69,7 +69,7 @@ Default: "Custom Campaign"
 
 ### --difficulty
 
-One of:
+Any number of:
 * `Novice`
 * `Experienced`
 * `Expert`
@@ -87,7 +87,17 @@ You can provide more than one difficulty, and a separate campaign will be genera
 This will create three templates, one for each difficulty.
 
 If multiple arguments are provided for another parameter,
-the longest parameter list will define the number of campaigns created.
+the behaviour depends on `--handleMultiple`.
+
+### --handleMultiple
+
+How to handle multiple lists of arguments, for example `--speedClass Halberd Spectre --difficulty Expert Elite`
+
+One of:
+* `Normal` - the longest argument list decides the number of campaigns to generate
+* `Explode` - generate campaigns for the cartesian product of all arguments
+
+Default: `Normal`
 
 ### --levelFileName
 
@@ -112,20 +122,9 @@ Number of points needed from beating the single races before the tournament can 
 
 Default: 0
 
-### --reverse
-
-One of:
-
-* `No` - no reverse tracks
-* `Yes` - only reverse tracks
-* `Both` - generate separate campaigns for forward and reverse tracks
-* `BothSameCampaign` - campaigns contain both forward and reverse tracks
-
-Default: `No`
-
 ### --speedClass
 
-One of:
+Any number of:
 * `Toxic`
 * `Apex`
 * `Halberd`
@@ -143,9 +142,11 @@ You can provide more than one speed class, and a separate campaign will be gener
 This will create three templates, one for each speed class.
 
 If multiple arguments are provided for another parameter,
-the longest parameter list will define the number of campaigns created.
+the behaviour depends on `--handleMultiple`.
 
 ### Multiple Arguments Example
+
+#### --handleMultiple Normal
 
 If more than one parameter list is supplied, and one is longer than the other, the last element will be duplicated. E.g:
 
@@ -161,7 +162,25 @@ This will create four templates:
 | Halberd     | Expert     |
 | Spectre     | Expert     |
 
+#### --handleMultiple Explode
 
+A cartesian product of all arguments will be used E.g:
+
+```
+--speedClass Toxic Apex Halberd Spectre --difficulty Novice Expert
+```
+This will create eight templates:
+
+| Speed Class | Difficulty |
+|-------------|------------|
+| Toxic       | Novice     |
+| Toxic       | Expert     |
+| Apex        | Novice     |
+| Apex        | Expert     |
+| Halberd     | Novice     |
+| Halberd     | Expert     |
+| Spectre     | Novice     |
+| Spectre     | Expert     |
 
 ## Level Text Files
 

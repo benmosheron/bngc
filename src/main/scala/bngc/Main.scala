@@ -5,6 +5,7 @@ import bngc.FileHelperFs2._
 import bngc.PlainData._
 import bngc.XmlHelper.removeContainerAndFormat
 import bngc.adt.Difficulty.Difficulty
+import bngc.adt.HandleMultiple.HandleMultiple
 import bngc.adt.SpeedClass.SpeedClass
 import bngc.adt._
 import bngc.template.{MainTemplate, SingleRaceEventTemplate, TournamentLevelTemplate}
@@ -24,6 +25,7 @@ object Main extends IOApp {
   private final case class ValidatedArgs(
       campaignName: CampaignName,
       difficultyNel: NonEmptyList[Difficulty],
+      handleMultiple: HandleMultiple,
       levelFilePath: LevelFilePath,
       outDirPath: OutDirPath,
       pointsToUnlockTournament: Points,
@@ -82,12 +84,19 @@ object Main extends IOApp {
       tournamentLevelTemplate: TournamentLevelTemplate
   ): NonEmptyList[SingleFileArgs] = {
 
-    val longestLength = List(args.speedClassNel.length, args.difficultyNel.length).max
+    val split: NonEmptyList[(SpeedClass, Difficulty)] = args.handleMultiple match {
+      case HandleMultiple.Normal =>
+        val longestLength = List(args.speedClassNel.length, args.difficultyNel.length).max
+        val speedClassNel = extend(args.speedClassNel, longestLength)
+        val difficultyNel = extend(args.difficultyNel, longestLength)
+        speedClassNel.zip(difficultyNel)
+      case HandleMultiple.Explode => for {
+        speedClass <- args.speedClassNel
+        difficulty <- args.difficultyNel
+      } yield (speedClass, difficulty)
+    }
 
-    val speedClassNel = extend(args.speedClassNel, longestLength)
-    val difficultyNel = extend(args.difficultyNel, longestLength)
-
-    speedClassNel.zip(difficultyNel).map { case (speedClass, difficulty) =>
+    split.map { case (speedClass, difficulty) =>
       SingleFileArgs(
         args.campaignName,
         difficulty,
@@ -155,6 +164,7 @@ object Main extends IOApp {
 
       campaignNameArg <- Args.readCampaignNameArg[IO](args)
       difficultyArgs <- Args.readDifficultyArgs[IO](args)
+      handleMultipleArg <- Args.readHandleMultipleArg[IO](args)
       levelFileNameArg <- Args.readLevelFileArg[IO](args)
       outDirArg <- Args.readOutFileDirectoryArg[IO](args)
       pointsToUnlockTournamentArg <- Args.readPointsToUnlockTournamentArg[IO](args)
@@ -164,12 +174,13 @@ object Main extends IOApp {
 
       a = Validated.valid[Error, CampaignName](CampaignName(campaignNameArg)).toValidatedNel
       b = Difficulty.validate(difficultyArgs)
-      c <- validateFileIsReadable[IO, LevelFilePath](levelFilePathArg)
-      d <- validateIsDirectory[IO, OutDirPath](outDirArg)
-      e = validatePointsToUnlockTournament(pointsToUnlockTournamentArg).map(Points)
-      f = SpeedClass.validate(speedClassArgs)
+      c = HandleMultiple.validate(handleMultipleArg)
+      d <- validateFileIsReadable[IO, LevelFilePath](levelFilePathArg)
+      e <- validateIsDirectory[IO, OutDirPath](outDirArg)
+      f = validatePointsToUnlockTournament(pointsToUnlockTournamentArg).map(Points)
+      g = SpeedClass.validate(speedClassArgs)
 
-      acceptedArgs <- acceptArgs[IO]((a, b, c, d, e, f).mapN(ValidatedArgs))
+      acceptedArgs <- acceptArgs[IO]((a, b, c, d, e, f, g).mapN(ValidatedArgs))
 
       levelNames <- readAllLines[IO, LevelName](acceptedArgs.levelFilePath.path)
       _ <- IO.println(s"Read [${levelNames.length}] level names from file")

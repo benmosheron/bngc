@@ -25,13 +25,17 @@ object Args {
   private val outFileDirectoryParam = "--outFileDirectory"
   private val outFileDirectoryDefault = "out"
 
+  private val handleMultipleParam = "--handleMultiple"
+  private val handleMultipleDefault = "Normal"
+
   private val allParams = Set(
     levelFileNameParam,
     speedClassParam,
     difficultyParam,
     campaignNameParam,
     pointsToUnlockTournamentParam,
-    outFileDirectoryParam
+    outFileDirectoryParam,
+    handleMultipleParam
   )
 
   def readLevelFileArg[F[_]: Console: Applicative](
@@ -57,6 +61,10 @@ object Args {
   def readOutFileDirectoryArg[F[_]: Console: Applicative](
       args: List[String]
   ): F[String] = readArg(args)(outFileDirectoryParam, outFileDirectoryDefault)
+
+  def readHandleMultipleArg[F[_]: Console: Applicative](
+      args: List[String]
+  ): F[String] = readArg(args)(handleMultipleParam, handleMultipleDefault)
 
   private def readArg[F[_]: Console: Applicative](
       args: List[String]
